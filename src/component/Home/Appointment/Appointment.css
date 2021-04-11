@@ -1,0 +1,26 @@
+.appointment-container {
+    /* height:800px; */
+    position:relative;
+    
+}
+.appointment-container::after {
+    height:350px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 80%;
+    right: 0;
+    background-color: #3A4256;
+    z-index: -50;
+    background-image: url('../../../images/Charbg.png');
+    background-size: cover;
+}
+.background{
+    margin-right: 200px;
+    margin-left: 0px;
+    margin-top: 100px;
+}
+.appointment-container img{
+    height: 450px;
+    transform: translateY(-100px);
+}
