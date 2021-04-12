@@ -1,5 +1,5 @@
 import React from 'react';
-import AppointmentFrom from '../../AppointmentFrom/AppointmentFrom';
+import AppointmentFrom from '../AppointmentFrom/AppointmentFrom';
 
 const BookingCard = ({booking,date}) => {
     const [modalIsOpen,setIsOpen] = React.useState(false);
@@ -23,7 +23,7 @@ const BookingCard = ({booking,date}) => {
                         <h6>{booking.visitingHour}</h6>
                         <p>{booking.totalSpace} SPACE AVAILABLE</p>\
                         <button onClick={openModal} className="btn btn-primary text-uppercase">Book Appointment</button>
-                        <AppointmentFrom modalIsOpen={modalIsOpen} closeModal={closeModal} AppointmentNow={booking.subject} date={date}></AppointmentFrom>
+                        <AppointmentFrom modalIsOpen={modalIsOpen} closeModal={closeModal} appointmentOn={booking.subject} date={date}></AppointmentFrom>
                 </div>
 
             </div>

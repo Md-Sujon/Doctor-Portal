@@ -1,5 +1,6 @@
 import './App.css';
 import React from "react";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,8 +10,10 @@ import Home from './component/Home/Home/Home';
 import Appointments from './component/Appointments/Appointments/Appointments';
 
 
+const [loggedInUser, setLoggedInUser] = useState({});
 function App() {
   return (
+   
     <Router >
       <Switch>
 
@@ -23,6 +26,7 @@ function App() {
         
       </Switch>
       </Router>
+      
   );
 }
 
