@@ -5,12 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faSignOutAlt, faCalendar, faGripHorizontal, faUsers } from '@fortawesome/free-solid-svg-icons';
 import {  faFileAlt } from '@fortawesome/free-regular-svg-icons'
 
+
 const Sidebar = () => {
     return (
-        <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{height:"100vh"}}>
+        <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4 p-5" style={{height:"100vh"}}>
             <ul className="list-unstyle">
                 <li>
-                    <Link to="/doctor/dashboard" className="text-white">
+                    <Link to="/dashboard/dashboard" className="text-white">
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span> 
                     </Link>
                 </li>
@@ -18,6 +19,11 @@ const Sidebar = () => {
                     <Link to="/doctor/appointment" className="text-white">
                         <FontAwesomeIcon icon={faCalendar} /> <span>Appointment</span> 
                     </Link>
+                </li>
+                <li>
+                    <Link to="/dashboard/addDoctors" className="text-white">
+                        <FontAwesomeIcon icon={faUsers} /> <span>Add Doctors</span>
+                     </Link>
                 </li>
                 <li>
                     <Link to="/doctor/patients" className="text-white">

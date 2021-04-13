@@ -11,6 +11,7 @@ import Appointments from './component/Appointments/Appointments/Appointments';
 import Login from './component/Login/Login/Login';
 import Dashboard from './component/Dashboard/Dashboard/Dashboard';
 import AllPatients from './component/AllPatients/AllPatients';
+import AddDoctors from './component/Dashboard/AddDoctors/AddDoctors';
 
 export const UserContext =createContext()
 
@@ -35,6 +36,13 @@ function App() {
         </Route>
         <Route path="/dashboard/allPatients">
             <AllPatients></AllPatients>
+          </Route>
+          <Route path="/dashboard/addDoctors">
+            <AddDoctors></AddDoctors>
+          </Route>
+
+          <Route path="/dashboard/dashboard">
+            <Dashboard></Dashboard>
           </Route>
 
         <Route path="/login">
