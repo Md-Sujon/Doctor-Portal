@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/auth";
-
-import { UserContext } from '../../../App';
+import imagebg from '../../../images/10.png'
 import { useHistory, useLocation } from 'react-router-dom';
+import firebaseConfig from '../../FirebaseConfig';
+import { UserContext } from '../../../App';
+
+
+
 
 
 const Login = () => {
@@ -14,6 +18,7 @@ const Login = () => {
   
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
+   
   }
 
   const handleGoogleSignIn = () => {
@@ -55,11 +60,11 @@ const Login = () => {
             <label htmlFor="" className="text-danger">Forgot your password?</label>
           </div>
           <div className="from-group mt-5">
-            <button className="btn btn-brand" onClick={handleGoogleSignIn}>Google Sign in</button>
+            <button className="btn btn-primary" onClick={handleGoogleSignIn}>Google Sign in</button>
           </div>
         </div>
         <div className="col-md-6 d-none d-md-block align-self-end">
-          {/* <img className="img-fluid" src={LoginBg} alt="" /> */}
+          <img style={{height:'500px', width:'500px'}} className="img-fluid" src={imagebg} alt="" />
         </div>
       </div>
     </div>

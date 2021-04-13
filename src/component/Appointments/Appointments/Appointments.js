@@ -8,8 +8,8 @@ import BookAppointment from '../BookAppointment/BookAppointment';
 
 const Appointments = () => {
     const [selectedDate,setSelectedDate]=useState(new Date())
-    const handleDateChange = data =>{
-       setSelectedDate(data);
+    const handleDateChange = date =>{
+       setSelectedDate(date);
     }
     return (
         <div>
